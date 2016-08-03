@@ -26,7 +26,7 @@ var TestGenerator = function() {
             step["headers"][header_name] = [header_value];
          }
 
-         note = request.name + " " + request.description;
+         step["note"] = request.name + " " + request.description;
 
          if (request.httpBasicAuth) {
             step["auth"]["auth_type"] = "basic";
@@ -47,7 +47,7 @@ var TestGenerator = function() {
          steps.push(step);
       }
 
-       return JSON.stringify({"steps": steps});
+       return JSON.stringify({"name": "Paw Export " + new Date().toLocaleString(), "steps": steps});
    }
 }
 
@@ -55,7 +55,7 @@ var TestGenerator = function() {
 TestGenerator.identifier = "com.runscope.TestGenerator";
 
 // give a display name to your Code Generator
-TestGenerator.title = "Runscope Test Generator";
+TestGenerator.title = "Runscope API Tests";
 
 // call to register function is required
 registerCodeGenerator(TestGenerator)
