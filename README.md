@@ -8,4 +8,4 @@ Use the Export or Export All functions in Paw to generate a file from one or mor
 
 - OAuth 2 and S3 Signature settings are not exported
 - OAuth 1 additional parameters, nonce and timestamp are not exported
-- Redirect and cookie settings are not exported (these can configured in your Runscope environments)
+- Redirect, cookie and client certificate settings are not exported (these can configured in your Runscope environments)
